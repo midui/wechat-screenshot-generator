@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 
 rm -rf .deploy_coding_pages
 git clone git@github.com:open-ideas-club/wechat-screenshot-generator.git .deploy_coding_pages
