@@ -9,7 +9,7 @@ npm install form2image --save
 ```javascript
 const form2image = require('form2image');
 
-interface reply{
+interface Reply{
 	name:string; // 名字
 	content:string; // 回复内容
 }
@@ -22,6 +22,6 @@ imageUrl = form2image(form:{
 	currentTime:string; // 手机右上角显示的时间
 	uploadTime:string; // 发朋友圈时间
 	starNames:string[]; // 点赞的人名
-	replyInfos:
+	replyInfos:Reply[]; // 回复数组
 }, type:string);
 ```
