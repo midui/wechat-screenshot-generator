@@ -21,6 +21,8 @@ if [ -n "$(git status --porcelain)" ]; then
   git commit -m "Update gh-pages"
   git push origin gh-pages
   git push coding gh-pages:coding-pages
+else
+  echo "No updates"
 fi
 
 cd ..
