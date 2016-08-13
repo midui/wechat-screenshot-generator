@@ -1,5 +1,4 @@
 #! /bin/bash
-set -e
 
 git remote add coding git@git.coding.net:xcatliu/wechat-screenshot-generator.git
 
