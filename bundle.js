@@ -55,7 +55,7 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = 'hELLO World from content.js';
+	module.exports = 'Hello World from content.js';
 
 
 /***/ }
