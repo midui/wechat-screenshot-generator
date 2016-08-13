@@ -15,6 +15,4 @@ before_install:
 - git config --global user.name 'xcatliu'
 - git config --global user.email 'xcatliu@gmail.com'
 script:
-- bash ./bin/deploy-gh-pages.sh
-- bash ./bin/deploy-coding-master.sh
-- bash ./bin/deploy-coding-pages.sh
+- bash ./bin/deploy.sh
