@@ -3,5 +3,5 @@ set -e
 
 git checkout master
 
-git remote add coding git@git.coding.net:open-ideas-club/wechat-screenshot-generator.git
+git remote add coding git@git.coding.net:xcatliu/wechat-screenshot-generator.git
 git push coding master
