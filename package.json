@@ -1,0 +1,40 @@
+{
+  "name": "wechat-screenshot-generator",
+  "version": "0.0.0",
+  "description": "WeChat Screenshot Generator",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "eslint . && echo 'ESLint Passed!\\n'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:open-ideas-club/wechat-screenshot-generator.git"
+  },
+  "keywords": [
+    "wechat",
+    "screenshot",
+    "generator",
+    "moments",
+    "conversation",
+    "canvas"
+  ],
+  "author": "xcatliu <xcatliu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/open-ideas-club/wechat-screenshot-generator/issues"
+  },
+  "homepage": "https://github.com/open-ideas-club/wechat-screenshot-generator#readme",
+  "devDependencies": {
+    "ecstatic": "^2.1.0",
+    "eslint": "^3.3.0",
+    "eslint-config-airbnb-base": "^5.0.2",
+    "eslint-plugin-import": "^1.13.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {}
+}
