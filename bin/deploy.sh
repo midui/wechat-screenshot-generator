@@ -1,6 +1,17 @@
 #! /bin/bash
 set -e
 
+# Pull requests and commits to other branches shouldn't try to deploy, just build to verify
+if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+    echo "Skipping deploy; just doing a build."
+    npm test
+    npm run build
+    exit 0
+fi
+
+npm test
+npm run build
+
 git remote add coding git@git.coding.net:xcatliu/wechat-screenshot-generator.git
 
 git checkout master
