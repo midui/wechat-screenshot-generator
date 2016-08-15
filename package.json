@@ -42,7 +42,6 @@
     "gulp-util": "^3.0.7",
     "html-webpack-plugin": "^2.8.1",
     "rimraf": "^2.5.4",
-    "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^8.5.3",
     "vue-style-loader": "^1.0.0",
