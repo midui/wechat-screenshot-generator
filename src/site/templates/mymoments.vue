@@ -67,8 +67,8 @@
             this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
             return this.canvas.toDataURL();
         }
-    }
-    
+    };
+
     let getbase64 = canvas2base64.init().do;
     let imageWidth = 50;
     let imageHeight = 50;
@@ -91,7 +91,5 @@
                 this.starNames.push('');
             }
         }
-    }
-
-
+    };
 </script>
