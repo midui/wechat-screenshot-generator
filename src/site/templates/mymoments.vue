@@ -1,5 +1,7 @@
-<style>
-
+<style scoped>
+    .row{
+        padding: 5px;
+    }
 </style>
 <template>
     <div class="row">
