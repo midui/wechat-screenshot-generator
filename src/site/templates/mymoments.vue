@@ -42,25 +42,14 @@
 </template>
 
 <script>
-    let formData = (localStorage.happy_formData && JSON.parse(localStorage.happy_formData)) || {
-        avatar: '', // 头像 图片
-        nickName: '', // 昵称
-        desc: '', // 描述
-        images: [], // 上传的图片数组 图片
-        uploadTime: '', // 发朋友圈时间
-        starNames: [''], // 点赞的人名
-        replyInfos: [{
-            name: '',
-            content: ''
-        }] // 回复数组
-    };
+
 
     let canvas2base64 = {
         canvas: document.createElement('canvas'),
         init: function () {
-            this.ctx = this.canvas.getContent('2d');
+            this.ctx = this.canvas.getContext('2d');
             return this;
-        }
+        },
         do: function (img, width, height) {
             this.canvas.width = width || img.width;
             this.canvas.height = height || img.height;
@@ -74,7 +63,20 @@
     let imageHeight = 50;
 
     module.exports = {
-        data: formData,
+        data: function () {
+            return (localStorage.happy_formData && JSON.parse(localStorage.happy_formData)) || {
+                avatar: '', // 头像 图片
+                nickName: '', // 昵称
+                desc: '', // 描述
+                images: [], // 上传的图片数组 图片
+                uploadTime: '', // 发朋友圈时间
+                starNames: [''], // 点赞的人名
+                replyInfos: [{
+                    name: '',
+                    content: ''
+                }] // 回复数组
+            };
+        },
         methods: {
             avatarChange: function (e) {
                 let file = e.target.files[0];
