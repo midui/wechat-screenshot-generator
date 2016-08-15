@@ -28,9 +28,9 @@
   <div class="row">
     <input type="button" value="添加点赞人员" v-on:click="addStarName">
   </div>
-  <div class="row" v-for="starName in starNames">
+  <div class="row" v-for="starName in starNames" track-by="$index">
     <span>点赞人员</span>
-    <input type="text" v-model="starN">
+    <input type="text" v-model="starName">
   </div>
   <div class="row">
     <span>聊天内容</span>
