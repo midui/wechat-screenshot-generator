@@ -44,29 +44,20 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* eslint-env browser */
+	/* eslint import/no-unresolved:0, no-new:0 */
 
-	const content = __webpack_require__(1);
-	const Vue = __webpack_require__(2);
-	const mymoments = __webpack_require__(4);
-
+	const Vue = __webpack_require__(1);
+	const moments = __webpack_require__(3);
 
 	new Vue({
-	    el: 'body',
-	    components: { mymoments }
-	})
+	  el: 'body',
+	  components: { moments },
+	});
 	// window.alert(content);
 
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	module.exports = 'Hello World from content.js';
-
-
-/***/ },
-/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -10143,10 +10134,10 @@
 	}, 0);
 
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(3)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(2)))
 
 /***/ },
-/* 3 */
+/* 2 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10312,17 +10303,17 @@
 
 
 /***/ },
-/* 4 */
+/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
-	__webpack_require__(5)
-	__vue_script__ = __webpack_require__(9)
+	__webpack_require__(4)
+	__vue_script__ = __webpack_require__(8)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/site/templates/mymoments.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(10)
+	  console.warn("[vue-loader] src/site/templates/moments.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(9)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	if (__vue_template__) {
@@ -10332,7 +10323,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e742f52e/mymoments.vue"
+	  var id = "_v-77e85dd6/moments.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10341,23 +10332,23 @@
 	})()}
 
 /***/ },
-/* 5 */
+/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(6);
+	var content = __webpack_require__(5);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(7)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e742f52e&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mymoments.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e742f52e&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mymoments.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-77e85dd6&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-77e85dd6&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10367,21 +10358,21 @@
 	}
 
 /***/ },
-/* 6 */
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(7)();
+	exports = module.exports = __webpack_require__(6)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "\n.row[_v-e742f52e]{\n    padding: 5px;\n}\n", ""]);
+	exports.push([module.id, "\n.row[_v-77e85dd6]{\n  padding: 5px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 7 */
+/* 6 */
 /***/ function(module, exports) {
 
 	/*
@@ -10437,7 +10428,7 @@
 
 
 /***/ },
-/* 8 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10659,23 +10650,23 @@
 
 
 /***/ },
-/* 9 */
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	var canvas2base64 = {
-	    canvas: document.createElement('canvas'),
-	    init: function init() {
-	        this.ctx = this.canvas.getContext('2d');
-	        return this;
-	    },
-	    do: function _do(img, width, height) {
-	        this.canvas.width = width || img.width;
-	        this.canvas.height = height || img.height;
-	        this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
-	        return this.canvas.toDataURL();
-	    }
+	  canvas: document.createElement('canvas'),
+	  init: function init() {
+	    this.ctx = this.canvas.getContext('2d');
+	    return this;
+	  },
+	  do: function _do(img, width, height) {
+	    this.canvas.width = width || img.width;
+	    this.canvas.height = height || img.height;
+	    this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
+	    return this.canvas.toDataURL();
+	  }
 	};
 
 	var getbase64 = canvas2base64.init().do;
@@ -10683,42 +10674,42 @@
 	var imageHeight = 50;
 
 	module.exports = {
-	    data: function data() {
-	        return localStorage.happy_formData && JSON.parse(localStorage.happy_formData) || {
-	            avatar: '',
-	            nickName: '',
-	            desc: '',
-	            images: [],
-	            uploadTime: '',
-	            starNames: [''],
-	            replyInfos: [{
-	                name: '',
-	                content: ''
-	            }] };
+	  data: function data() {
+	    return localStorage.happy_formData && JSON.parse(localStorage.happy_formData) || {
+	      avatar: '',
+	      nickName: '',
+	      desc: '',
+	      images: [],
+	      uploadTime: '',
+	      starNames: [''],
+	      replyInfos: [{
+	        name: '',
+	        content: ''
+	      }] };
+	  },
+	  methods: {
+	    avatarChange: function avatarChange(e) {
+	      var file = e.target.files[0];
+	      var reader = new FileReader();
+	      reader.onload = function (theFile, self) {
+	        return function (e) {
+	          var img = document.createElement('img');
+	          img.src = e.target.result;
+	          self.avatar = getbase64(img, imageWidth, imageHeight);
+	        };
+	      }(file, this);
 	    },
-	    methods: {
-	        avatarChange: function avatarChange(e) {
-	            var file = e.target.files[0];
-	            var reader = new FileReader();
-	            reader.onload = function (theFile, self) {
-	                return function (e) {
-	                    var img = document.createElement('img');
-	                    img.src = e.target.result;
-	                    self.avatar = getbase64(img, imageWidth, imageHeight);
-	                };
-	            }(file, this);
-	        },
-	        addStarName: function addStarName() {
-	            this.starNames.push('');
-	        }
+	    addStarName: function addStarName() {
+	      this.starNames.push('');
 	    }
+	  }
 	};
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">头像</span>\n     <input type=\"file\" accept=\"image/*\" v-on:change=\"avatarChange\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">昵称</span>\n    <input type=\"text\" v-model=\"nickName\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">内容</span>\n    <input type=\"text\" v-model=\"desc\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">附件图片</span>\n    <input type=\"file\" name=\"images\" accept=\"image/*\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">发布时间</span>\n    <input type=\"text\" v-model=\"uploadTime\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <input type=\"button\" value=\"添加点赞人员\" v-on:click=\"addStarName\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" v-for=\"starName in starNames\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">点赞人员</span>\n    <input type=\"text\" v-model=\"starN\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <span _v-e742f52e=\"\">聊天内容</span>\n</div>\n<div class=\"row\" v-for=\"replyInfo in replyInfos\" _v-e742f52e=\"\">\n    <input type=\"text\" v-model=\"replyInfo.name\" data-auto=\"false\" _v-e742f52e=\"\">\n    <input type=\"text\" v-model=\"replyInfo.content\" data-auto=\"false\" _v-e742f52e=\"\">\n</div>\n<div class=\"row\" _v-e742f52e=\"\">\n    <input type=\"button\" name=\"submit\" value=\"生成图片\" _v-e742f52e=\"\">\n</div>\n";
+	module.exports = "\n\n\n\n\n\n\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">头像</span>\n   <input type=\"file\" accept=\"image/*\" v-on:change=\"avatarChange\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">昵称</span>\n  <input type=\"text\" v-model=\"nickName\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">内容</span>\n  <input type=\"text\" v-model=\"desc\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">附件图片</span>\n  <input type=\"file\" name=\"images\" accept=\"image/*\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">发布时间</span>\n  <input type=\"text\" v-model=\"uploadTime\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <input type=\"button\" value=\"添加点赞人员\" v-on:click=\"addStarName\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" v-for=\"starName in starNames\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">点赞人员</span>\n  <input type=\"text\" v-model=\"starN\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">聊天内容</span>\n</div>\n<div class=\"row\" v-for=\"replyInfo in replyInfos\" _v-77e85dd6=\"\">\n  <input type=\"text\" v-model=\"replyInfo.name\" data-auto=\"false\" _v-77e85dd6=\"\">\n  <input type=\"text\" v-model=\"replyInfo.content\" data-auto=\"false\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <input type=\"button\" name=\"submit\" value=\"生成图片\" _v-77e85dd6=\"\">\n</div>\n";
 
 /***/ }
 /******/ ]);
