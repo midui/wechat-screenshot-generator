@@ -1,12 +1,10 @@
-/* eslint-env browser */
+/* eslint import/no-unresolved:0, no-new:0 */
 
-const content = require('./content');
 const Vue = require('vue');
-const mymoments = require('./templates/mymoments');
-
+const moments = require('./templates/moments');
 
 new Vue({
-    el: 'body',
-    components: { mymoments }
-})
+  el: 'body',
+  components: { moments },
+});
 // window.alert(content);
