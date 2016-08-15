@@ -45,54 +45,56 @@
 </template>
 
 <script>
-  let canvas2base64 = {
+  /* eslint-env browser */
+  /* eslint no-param-reassign:0 */
+  const canvas2base64 = {
     canvas: document.createElement('canvas'),
-    init: function () {
+    init() {
       this.ctx = this.canvas.getContext('2d');
       return this;
     },
-    do: function (img, width, height) {
+    do(img, width, height) {
       this.canvas.width = width || img.width;
       this.canvas.height = height || img.height;
       this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
       return this.canvas.toDataURL();
-    }
+    },
   };
 
-  let getbase64 = canvas2base64.init().do;
-  let imageWidth = 50;
-  let imageHeight = 50;
+  const getbase64 = canvas2base64.init().do;
+  const imageWidth = 50;
+  const imageHeight = 50;
 
   module.exports = {
-    data: function () {
+    data() {
       return (localStorage.happy_formData && JSON.parse(localStorage.happy_formData)) || {
-        avatar: '', // 头像 图片
-        nickName: '', // 昵称
-        desc: '', // 描述
-        images: [], // 上传的图片数组 图片
-        uploadTime: '', // 发朋友圈时间
-        starNames: [''], // 点赞的人名
+        avatar: '',       // 头像 图片
+        nickName: '',     // 昵称
+        desc: '',         // 描述
+        images: [],       // 上传的图片数组 图片
+        uploadTime: '',   // 发朋友圈时间
+        starNames: [''],  // 点赞的人名
         replyInfos: [{
           name: '',
-          content: ''
-        }] // 回复数组
+          content: '',
+        }],               // 回复数组
       };
     },
     methods: {
-      avatarChange: function (e) {
-        let file = e.target.files[0];
-        let reader = new FileReader();
-        reader.onload = (function(theFile, self){
-          return function(e){
-            let img = document.createElement('img');
-            img.src = e.target.result;
+      avatarChange(e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (function (theFile, self) {
+          return (evt) => {
+            const img = document.createElement('img');
+            img.src = evt.target.result;
             self.avatar = getbase64(img, imageWidth, imageHeight);
-          }
-        })(file, this);
+          };
+        }(file, this));
       },
-      addStarName: function () {
+      addStarName() {
         this.starNames.push('');
-      }
-    }
+      },
+    },
   };
 </script>
