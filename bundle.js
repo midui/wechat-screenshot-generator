@@ -10687,14 +10687,15 @@
 	        content: ''
 	      }] };
 	  },
+
 	  methods: {
 	    avatarChange: function avatarChange(e) {
 	      var file = e.target.files[0];
 	      var reader = new FileReader();
 	      reader.onload = function (theFile, self) {
-	        return function (e) {
+	        return function (evt) {
 	          var img = document.createElement('img');
-	          img.src = e.target.result;
+	          img.src = evt.target.result;
 	          self.avatar = getbase64(img, imageWidth, imageHeight);
 	        };
 	      }(file, this);
