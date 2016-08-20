@@ -38,7 +38,7 @@ gulp.task('copyCNAME', () => {
   gulp.src('./CNAME', {
     base: SITE_DIR,
   }).pipe(gulp.dest(PUBLIC_DIR));
-})
+});
 
 gulp.task('webpack', (done) => {
   // run webpack
