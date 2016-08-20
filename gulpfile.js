@@ -19,7 +19,7 @@ gulp.task('clean', (done) => {
   rimraf(`${PUBLIC_DIR}/**`, done);
 });
 
-gulp.task('build', ['copyHtmlAndCss', 'webpack']);
+gulp.task('build', ['copyHtmlAndCss', 'copyCNAME', 'webpack']);
 
 gulp.task('build:dev', ['build'], () => {
   gulp.watch('src/**/*', ['build']);
@@ -33,6 +33,12 @@ gulp.task('copyHtmlAndCss', () => {
     base: SITE_DIR,
   }).pipe(gulp.dest(PUBLIC_DIR));
 });
+
+gulp.task('copyCNAME', () => {
+  gulp.src('./CNAME', {
+    base: SITE_DIR,
+  }).pipe(gulp.dest(PUBLIC_DIR));
+})
 
 gulp.task('webpack', (done) => {
   // run webpack
