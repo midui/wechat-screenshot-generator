@@ -26,18 +26,12 @@ gulp.task('build:dev', ['build'], () => {
 });
 
 gulp.task('copyHtmlAndCss', () => {
-  gulp.src('./**/*.html', {
-    base: SITE_DIR,
-  }).pipe(gulp.dest(PUBLIC_DIR));
-  gulp.src('./**/*.css', {
-    base: SITE_DIR,
-  }).pipe(gulp.dest(PUBLIC_DIR));
+  gulp.src(`${SITE_DIR}**/*.html`).pipe(gulp.dest(PUBLIC_DIR));
+  gulp.src(`${SITE_DIR}/**/*.css`).pipe(gulp.dest(PUBLIC_DIR));
 });
 
 gulp.task('copyCNAME', () => {
-  gulp.src('./CNAME', {
-    base: SITE_DIR,
-  }).pipe(gulp.dest(PUBLIC_DIR));
+  gulp.src(`${SITE_DIR}/CNAME`).pipe(gulp.dest(PUBLIC_DIR));
 });
 
 gulp.task('webpack', (done) => {
