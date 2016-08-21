@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/open-ideas-club/wechat-screenshot-generator.svg?branch=master)](https://travis-ci.org/open-ideas-club/wechat-screenshot-generator)
 
-- Site: http://wsg.apps.hack1day.com/
+- Site: http://wsg.hack1day.com/
 
 ## Getting start
 
