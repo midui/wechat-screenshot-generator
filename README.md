@@ -1,6 +1,6 @@
 # WeChat Screenshot Generator
 
-[![Build Status](https://travis-ci.org/open-ideas-club/wechat-screenshot-generator.svg?branch=master)](https://travis-ci.org/open-ideas-club/wechat-screenshot-generator)
+[![Build Status](https://travis-ci.org/hack1day/wechat-screenshot-generator.svg?branch=master)](https://travis-ci.org/hack1day/wechat-screenshot-generator)
 
 - Site: http://wsg.hack1day.com/
 
@@ -12,4 +12,3 @@ npm start
 ```
 
 Open http://localhost:8000
-

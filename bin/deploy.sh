@@ -18,7 +18,7 @@ git checkout master
 git push coding master
 
 rm -rf .deploy
-git clone git@github.com:open-ideas-club/wechat-screenshot-generator.git .deploy
+git clone git@github.com:hack1day/wechat-screenshot-generator.git .deploy
 
 cd .deploy
 git remote add coding git@git.coding.net:xcatliu/wechat-screenshot-generator.git
