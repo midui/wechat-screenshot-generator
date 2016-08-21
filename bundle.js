@@ -10323,7 +10323,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-77e85dd6/moments.vue"
+	  var id = "_v-c1e8574a/moments.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10347,8 +10347,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-77e85dd6&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-77e85dd6&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c1e8574a&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c1e8574a&scoped=true!./../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./moments.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10366,7 +10366,7 @@
 
 
 	// module
-	exports.push([module.id, "\n.row[_v-77e85dd6]{\n  padding: 5px;\n}\n", ""]);
+	exports.push([module.id, "\n.row[_v-c1e8574a]{\n  padding: 5px;\n}\n", ""]);
 
 	// exports
 
@@ -10710,7 +10710,7 @@
 /* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">头像</span>\n   <input type=\"file\" accept=\"image/*\" v-on:change=\"avatarChange\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">昵称</span>\n  <input type=\"text\" v-model=\"nickName\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">内容</span>\n  <input type=\"text\" v-model=\"desc\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">附件图片</span>\n  <input type=\"file\" name=\"images\" accept=\"image/*\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">发布时间</span>\n  <input type=\"text\" v-model=\"uploadTime\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <input type=\"button\" value=\"添加点赞人员\" v-on:click=\"addStarName\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" v-for=\"starName in starNames\" track-by=\"$index\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">点赞人员</span>\n  <input type=\"text\" v-model=\"starName\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <span _v-77e85dd6=\"\">聊天内容</span>\n</div>\n<div class=\"row\" v-for=\"replyInfo in replyInfos\" _v-77e85dd6=\"\">\n  <input type=\"text\" v-model=\"replyInfo.name\" data-auto=\"false\" _v-77e85dd6=\"\">\n  <input type=\"text\" v-model=\"replyInfo.content\" data-auto=\"false\" _v-77e85dd6=\"\">\n</div>\n<div class=\"row\" _v-77e85dd6=\"\">\n  <input type=\"button\" name=\"submit\" value=\"生成图片\" _v-77e85dd6=\"\">\n</div>\n";
+	module.exports = "\n\n\n\n\n\n\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">头像</span>\n   <input type=\"file\" accept=\"image/*\" v-on:change=\"avatarChange\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">昵称</span>\n  <input type=\"text\" v-model=\"nickName\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">内容</span>\n  <input type=\"text\" v-model=\"desc\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">附件图片</span>\n  <input type=\"file\" name=\"images\" accept=\"image/*\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">发布时间</span>\n  <input type=\"text\" v-model=\"uploadTime\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <input type=\"button\" value=\"添加点赞人员\" v-on:click=\"addStarName\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" v-for=\"starName in starNames\" track-by=\"$index\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">点赞人员</span>\n  <input type=\"text\" v-model=\"starName\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <span _v-c1e8574a=\"\">聊天内容</span>\n</div>\n<div class=\"row\" v-for=\"replyInfo in replyInfos\" _v-c1e8574a=\"\">\n  <input type=\"text\" v-model=\"replyInfo.name\" data-auto=\"false\" _v-c1e8574a=\"\">\n  <input type=\"text\" v-model=\"replyInfo.content\" data-auto=\"false\" _v-c1e8574a=\"\">\n</div>\n<div class=\"row\" _v-c1e8574a=\"\">\n  <input type=\"button\" name=\"submit\" value=\"生成图片\" _v-c1e8574a=\"\">\n</div>\n";
 
 /***/ }
 /******/ ]);
