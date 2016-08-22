@@ -15,11 +15,11 @@ const PORT = 8000;
 
 gulp.task('default', ['build:dev', 'serve']);
 
-gulp.task('clean', (done) => {
-  rimraf(`${PUBLIC_DIR}/**`, done);
+gulp.task('clean', () => {
+  rimraf.sync(`${PUBLIC_DIR}/**`);
 });
 
-gulp.task('build', ['copyHtmlAndCss', 'copyCNAME', 'webpack']);
+gulp.task('build', ['clean', 'copyHtmlAndCss', 'copyCNAME', 'webpack']);
 
 gulp.task('build:dev', ['build'], () => {
   gulp.watch('src/**/*', ['build']);
